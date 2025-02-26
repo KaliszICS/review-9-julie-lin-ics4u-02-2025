@@ -28,37 +28,18 @@ public class PracticeProblem {
 		
 	}
 	public static int oddSum(int num1, int num2) {
+		int min = Math.min(num1,num2);
+		int max = Math.max(num1,num2);
 		int sum = 0;
-		if (num1 < num2){
-			if (num1 %2 != 0){
-				while (num1 < num2 ){
-					sum = num1 += 2; 
-				}
-			}
-			else {
-				num1++;
-				while (num1 <= num2){
-					sum = num1 += 2; 
-				}
-			}
-		}
-		else{
-			if (num2 %2 != 0){
-				while (num2 < num1 ){
-					sum = num2 += 2; 
-				}
-			}
-			else {
-				while (num2 <= num1){
-					sum = num2 + 2; 
-				}
+		for (int i = min; i <= max; i++){
+			if (i % 2 != 0){
+				sum += i;
 			}
 		}
 		return sum;
-		}
 
-		//for (int i = 0; i < num1 || i < num2; i++) {
 
 	}
+}
 
 
